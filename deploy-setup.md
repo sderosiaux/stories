@@ -12,7 +12,7 @@ This guide will help you deploy the Conduktor Story website to GitHub Pages.
 ### 1. Create GitHub Repository
 ```bash
 # If you haven't already, initialize git and add remote
-git remote add origin https://github.com/YOUR_USERNAME/conduktor-story.git
+git remote add origin https://github.com/YOUR_USERNAME/stories.git
 ```
 
 ### 2. Configure GitHub Pages
@@ -36,7 +36,7 @@ git push -u origin main
 
 ### Next.js Configuration (`next.config.ts`)
 - ✅ Static export enabled (`output: 'export'`)
-- ✅ Base path configured for GitHub Pages (`/conduktor-story`)
+- ✅ Base path configured for GitHub Pages (`/stories`)
 - ✅ Image optimization disabled for static hosting
 - ✅ Trailing slashes enabled
 
@@ -54,7 +54,7 @@ git push -u origin main
 
 After deployment, your site will be available at:
 ```
-https://YOUR_USERNAME.github.io/conduktor-story/
+https://YOUR_USERNAME.github.io/stories/
 ```
 
 ## Manual Deployment (Optional)
@@ -75,5 +75,5 @@ npm run deploy
 ## Notes
 
 - The site is configured to work both locally (`npm run dev`) and on GitHub Pages
-- All assets and routing are configured for the `/conduktor-story` base path in production
+- All assets and routing are configured for the `/stories` base path in production
 - The `.nojekyll` file prevents Jekyll processing on GitHub Pages
