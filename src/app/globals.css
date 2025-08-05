@@ -1,26 +1,189 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, 
+    #0a0a0a 0%, 
+    #1a0a2e 25%, 
+    #16213e 50%, 
+    #0f3460 75%, 
+    #0a0a0a 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Ambient background effects */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(255, 206, 84, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+  animation: ambient 20s ease-in-out infinite;
+}
+
+@keyframes ambient {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+/* Floating orbs */
+.floating-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(45deg, 
+    rgba(255, 119, 198, 0.4), 
+    rgba(120, 119, 198, 0.4));
+  filter: blur(1px);
+  animation: float 15s ease-in-out infinite;
+}
+
+.floating-orb:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.floating-orb:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  top: 70%;
+  right: 15%;
+  animation-delay: -5s;
+}
+
+.floating-orb:nth-child(3) {
+  width: 100px;
+  height: 100px;
+  top: 40%;
+  right: 40%;
+  animation-delay: -10s;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% { 
+    transform: translateY(-20px) rotate(120deg);
+  }
+  66% { 
+    transform: translateY(10px) rotate(240deg);
+  }
+}
+
+/* Modern glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Gradient text effects */
+.gradient-text {
+  background: linear-gradient(135deg, 
+    #ff7cc6 0%, 
+    #7777c6 25%, 
+    #ffce54 50%, 
+    #ff7cc6 75%, 
+    #7777c6 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 8s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Modern button effects */
+.modern-button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, 
+    rgba(255, 124, 198, 0.8), 
+    rgba(119, 119, 198, 0.8));
+  border: none;
+  border-radius: 50px;
+  padding: 12px 32px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px 0 rgba(255, 124, 198, 0.3);
+}
+
+.modern-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent);
+  transition: left 0.5s;
+}
+
+.modern-button:hover::before {
+  left: 100%;
+}
+
+.modern-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px 0 rgba(255, 124, 198, 0.4);
+}
+
+/* Asymmetric sections */
+.asymmetric-left {
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+}
+
+.asymmetric-right {
+  clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Parallax container */
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff7cc6, #7777c6);
+  border-radius: 3px;
 }
