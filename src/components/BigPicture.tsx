@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { Network, Eye, Database, Users, Shield, Zap } from 'lucide-react';
+import { Eye, Users, Shield, Zap } from 'lucide-react';
 
 export default function BigPicture() {
   const [selectedFlow, setSelectedFlow] = useState<string | null>(null);

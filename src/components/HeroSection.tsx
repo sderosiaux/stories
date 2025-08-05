@@ -61,7 +61,7 @@ export default function HeroSection() {
                 transition={{ delay: 0.8 }}
                 className="text-lg text-white/50 mb-12 max-w-lg"
               >
-                Transform your team's Kafka experience from chaos to zen. 
+                Transform your team&apos;s Kafka experience from chaos to zen. 
                 Alice finally gets her coffee. Bob gets his reports.
               </motion.p>
 

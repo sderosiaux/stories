@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useState, useRef } from 'react';
-import { User, Coffee, BarChart3, Settings, MessageSquare, Sparkles } from 'lucide-react';
+import { Coffee, Settings, Sparkles } from 'lucide-react';
 
 export default function PersonaShowcase() {
   const [activePersona, setActivePersona] = useState<'alice' | 'bob'>('alice');

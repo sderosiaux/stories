@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import React from 'react';
-import { Terminal, Play, CheckCircle, Users, Database, Shield } from 'lucide-react';
+import { Terminal, CheckCircle, Users, Database, Shield } from 'lucide-react';
 
 export default function PlatformSetup() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -18,7 +18,7 @@ export default function PlatformSetup() {
 ✅ Spinning up Kafka cluster...
 ✅ Loading sample data...
 ✅ Setting up users in LDAP...`,
-      explanation: "One script sets up everything: Kafka, data, users. Alice doesn't want to babysit infrastructure."
+      explanation: "One script sets up everything: Kafka, data, users. Alice doesn&apos;t want to babysit infrastructure."
     },
     {
       id: 'api',
@@ -82,7 +82,7 @@ conduktor.assign_permission(
             How Alice Sets the <span className="text-blue-400">Stage</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Alice configures it once. She doesn't want to babysit it. 
+            Alice configures it once. She doesn&apos;t want to babysit it. 
             <br />
             <em className="text-blue-400">Smart defaults, not endless options.</em>
           </p>
@@ -228,7 +228,7 @@ conduktor.assign_permission(
 
             <div className="space-y-6">
               <div className="bg-slate-800 rounded-xl p-6">
-                <h4 className="text-lg font-semibold mb-4 text-blue-400">Alice's Setup Checklist</h4>
+                <h4 className="text-lg font-semibold mb-4 text-blue-400">Alice&apos;s Setup Checklist</h4>
                 <div className="space-y-3">
                   {steps.map((step, index) => (
                     <div
@@ -275,7 +275,7 @@ conduktor.assign_permission(
           >
             <div className="bg-slate-800 rounded-xl p-6 inline-block">
               <p className="text-lg text-gray-300">
-                <strong className="text-blue-400">Result:</strong> Alice's environment is ready in minutes, not days.
+                <strong className="text-blue-400">Result:</strong> Alice&apos;s environment is ready in minutes, not days.
                 <br />
                 <em className="text-sm text-gray-400">Now she can finally enjoy her coffee ☕</em>
               </p>

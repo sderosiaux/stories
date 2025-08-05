@@ -2,13 +2,11 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
-import { Search, Eye, Lock, Clock, CheckCircle, GitBranch, MousePointer } from 'lucide-react';
+import { Search, Eye, Clock, CheckCircle, GitBranch, MousePointer } from 'lucide-react';
 
 export default function BobJourney() {
   const [currentStep, setCurrentStep] = useState(0);
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
-  const [requestSubmitted, setRequestSubmitted] = useState(false);
-  const [accessGranted, setAccessGranted] = useState(false);
 
   const topics = [
     {
@@ -65,10 +63,8 @@ export default function BobJourney() {
   };
 
   const handleRequestAccess = () => {
-    setRequestSubmitted(true);
     setCurrentStep(2);
     setTimeout(() => {
-      setAccessGranted(true);
       setCurrentStep(3);
     }, 3000);
   };
@@ -93,7 +89,7 @@ export default function BobJourney() {
           >
             <div>
               <h2 className="text-6xl md:text-8xl font-black mb-8 leading-none">
-                Bob's <span className="gradient-text">Journey</span>
+                Bob&apos;s <span className="gradient-text">Journey</span>
               </h2>
               <p className="text-2xl text-white/60">
                 From &quot;I need data&quot; to &quot;I have data&quot;
@@ -396,7 +392,7 @@ export default function BobJourney() {
                           <div>spec:</div>
                           <div>  topic: order_validated</div>
                           <div>  access: read</div>
-                          <div>  reason: "Q4 reporting"</div>
+                          <div>  reason: &quot;Q4 reporting&quot;</div>
                         </div>
                       </div>
 

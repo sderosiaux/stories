@@ -20,7 +20,7 @@ export default function CallToAction() {
             Your Kafka Experience?
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
-            Join the companies who've made Kafka accessible to everyone.
+            Join the companies who&apos;ve made Kafka accessible to everyone.
             <br />
             <em className="text-orange-400">Alice finally gets to enjoy her coffee. Bob gets his reports on time.</em>
           </p>
@@ -80,7 +80,7 @@ export default function CallToAction() {
           >
             <MessageCircle className="w-8 h-8 mx-auto mb-4 text-orange-400" />
             <h3 className="font-bold mb-2">Contact Us</h3>
-            <p className="text-sm text-gray-400">Let's talk</p>
+            <p className="text-sm text-gray-400">Let&apos;s talk</p>
           </motion.a>
         </div>
 

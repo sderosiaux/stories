@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Settings, Zap, Activity, Bell } from 'lucide-react';
+import { Settings, Activity } from 'lucide-react';
 
 export default function OperationsSection() {
   return (
@@ -20,7 +20,7 @@ export default function OperationsSection() {
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Kafka Connect config: now 70% less YAML-induced anxiety.
             <br />
-            <em className="text-purple-400">Conduktor watches so you don't have to.</em>
+            <em className="text-purple-400">Conduktor watches so you don&apos;t have to.</em>
           </p>
         </motion.div>
 

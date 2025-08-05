@@ -79,7 +79,7 @@ export default function GovernanceSection() {
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             This is the basic requirement for enterprise adoption.
             <br />
-            <em className="text-red-400">Security that doesn't get in the way.</em>
+            <em className="text-red-400">Security that doesn&apos;t get in the way.</em>
           </p>
         </motion.div>
 

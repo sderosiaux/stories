@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Command, GitBranch, Mouse, Terminal } from 'lucide-react';
+import { Command, GitBranch, Mouse } from 'lucide-react';
 
 export default function ProductPhilosophy() {
   return (

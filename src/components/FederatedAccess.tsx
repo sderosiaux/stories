@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { ArrowRight, Users, CheckCircle, Shield, Trash2, Database, Clock, Zap } from 'lucide-react';
+import { Users, CheckCircle, Shield, Trash2, Database, Clock, Zap } from 'lucide-react';
 
 export default function FederatedAccess() {
   const [activeTab, setActiveTab] = useState<'scale' | 'cleanup' | 'rbac'>('scale');
