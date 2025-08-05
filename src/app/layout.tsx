@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Kafka Self-Service, Without the Kafkaesque | Conduktor",
-  description: "An interactive story about how Conduktor's Self-Service product makes Kafka accessible to everyone - safely, smartly, and with style. Experience the transformation from chaos to zen.",
+  title: "Conduktor Self-Service: Kafka Without the Kafkaesque",
+  description: "An interactive story about how Conduktor Self-Service makes Kafka accessible to everyone - safely, smartly, and with style. Experience the transformation from chaos to zen.",
 };
 
 export default function RootLayout({
