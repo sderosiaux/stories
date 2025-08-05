@@ -41,7 +41,7 @@ export default function HeroSection() {
               />
               
               <h1 className="text-7xl lg:text-9xl font-black mb-8 leading-none">
-                <span className="gradient-text">Kafka</span>
+                <span className="gradient-text">Conduktor</span>
                 <br />
                 <span className="text-white/90">Self-Service</span>
               </h1>
